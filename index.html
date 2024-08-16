@@ -30,7 +30,7 @@
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
-            border: 2px solid crimson;
+            /* border: 2px solid crimson; */
         }
         button{
             width: 100px;
@@ -47,17 +47,14 @@
             background-color: rgb(255, 68, 0);
             /* color: black; */
         }
-        .mainContent{
-            border: 2px solid black;
+        #mainContent{
+            /* border: 2px solid black; */
             height: 500px;
             width: 600px;
             display: flex;
             flex-direction: column;
             padding: 5px;
             align-items: center;
-        }
-        .imgGenerator{
-            border: 2px solid red;
         }
     </style>
 </head>
@@ -77,7 +74,7 @@
     </nav>
     <hr> 
     <main>
-        <div class="mainContent" id="mainContent"  >
+        <div id="mainContent" st>
             <h1>Start your BK order</h1>
 
            <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
@@ -89,6 +86,13 @@
            <div style="display: flex; flex-direction: row ; align-items: center; justify-content: space-evenly; gap: 10px; font-size: large;"> <input type="checkbox" id="burgerCheck" name="foodItem" value="Fries"><label for="Burger"><span>Fries</span></label></div>
            </div>
             <button id="orderNow">Order now</button>
+            <div class="idDetails">
+                <div id="images" style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                    <h4 id="process"></h4>
+                    <img id="imageRight" src="" alt="" width="50px">
+                </div>
+                <h1 id="orderId"></h1>
+            </div>
         </div>
         <style>
             .vl {
