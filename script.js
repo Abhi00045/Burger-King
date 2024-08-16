@@ -26,7 +26,7 @@ orderNow.addEventListener("click",function(){
     }
     try{
 
-      const orderIdValue = Math.floor(Math.random() * 1000) + 100;
+      const orderIdValue = Math.floor(Math.random() * 1000) + 1000;
       const time = Math.floor(Math.random()*1000)+10;
 
       setTimeout(() => {
@@ -39,17 +39,20 @@ orderNow.addEventListener("click",function(){
       const randomFood = arr[Math.floor(Math.random() * arr.length)];
     // let foodImage = document.createElement("img");
     console.log(randomFood);
-    if(randomFood === "Burger"){
-      document.getElementById("imgTag").src = "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_mobile_my18jv"
-    }
-    else if(randomFood === "Coca-cola"){
-     document.getElementById("imgTag").src = "https://th.bing.com/th/id/R.996bb71bb24208697a135393899ca0b3?rik=dRJdT%2b%2fO60BzBQ&riu=http%3a%2f%2fwww.omaggiomania.com%2fwp-content%2fuploads%2f2014%2f06%2fbuono-sconto-Coca-Cola-da-Burger-King_w.png&ehk=6wQ4D%2bI3BRalI1pLikBwZvJiE2H5wdYM5I4t4D0jeWU%3d&risl=&pid=ImgRaw&r=0"
-    }
-    else if(randomFood === "Fries"){
-      document.getElementById("imgTag").src = "https://img.lovepik.com/photo/50159/3889.jpg_wh860.jpg"
-    }
+    setTimeout(() => {
+      if(randomFood === "Burger"){
+        document.getElementById("imgTag").src = "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_mobile_my18jv"
+      }
+      else if(randomFood === "Coca-cola"){
+       document.getElementById("imgTag").src = "https://th.bing.com/th/id/R.996bb71bb24208697a135393899ca0b3?rik=dRJdT%2b%2fO60BzBQ&riu=http%3a%2f%2fwww.omaggiomania.com%2fwp-content%2fuploads%2f2014%2f06%2fbuono-sconto-Coca-Cola-da-Burger-King_w.png&ehk=6wQ4D%2bI3BRalI1pLikBwZvJiE2H5wdYM5I4t4D0jeWU%3d&risl=&pid=ImgRaw&r=0"
+      }
+      else if(randomFood === "Fries"){
+        document.getElementById("imgTag").src = "https://img.lovepik.com/photo/50159/3889.jpg_wh860.jpg"
+      }
+ 
+    }, 1000);
     }catch(error){
-      console.log(error);
+      console.log(`404 not found ${error}`);
     }finally{
       process.innerText="processing your order....";
       setTimeout(() => {
